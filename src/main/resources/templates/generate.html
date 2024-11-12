@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Generate</title>
+</head>
+<body>
+
+    <div data-th-if="${name != null or count != null}">
+        <h2>Hello <span data-th-text="${name}"></span>!</h2>
+        <h3 data-th-if="${count le 1}">This is your <span data-th-text="${count}"></span> lucky number!</h3>
+        <h3 data-th-unless="${count le 1}">These are your <span data-th-text="${count}"></span> lucky numbers!</h3>
+
+        <table>
+            <tr>
+                <td data-th-each="img, status: ${numbers}">
+                    <img data-th-src="${img}" height="100px" width="automatic">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div data-th-unless="${name != null or count != null}">
+        <h2>Here are your list of numbers</h2>
+        <table>
+            <tr>
+                <td data-th-each="img, status: ${numbers}">
+                    <img data-th-src="${img}" height="100px" width="automatic">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <a href="/"><h3>Back</h3></a>
+    </div>
+    
+</body>
+</html>
