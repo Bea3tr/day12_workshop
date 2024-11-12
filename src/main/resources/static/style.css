@@ -18,3 +18,25 @@ input {
 h3 {
     font-size:24px;
 }
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:24px;
+    background-color:lavender;
+}
+
+button:hover {
+    background-color: rgba(124, 104, 238, 0.607);
+}
+
+button:active {
+    background-color: rgba(153, 50, 204, 0.616);
+}
+
+img {
+    padding: 10px;
+    margin: 10px;
+    border: dotted purple 5px;
+    width: 150px;
+    height: 200px;
+}
