@@ -37,7 +37,7 @@ public class NumberController {
                 count = values.size();
                 model.addAttribute(ATTR_NAME, name.toUpperCase());
                 model.addAttribute(ATTR_COUNT, count);
-            return "random_nums";
+                return "random_nums";
             }
 
             return "list_nums";
